@@ -3,48 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="bootstrap-reboot.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>○×ゲーム</h1>
+    <header class="h-16 max-w-full flex items-center justify-center shadow">
+        <div class="max-w-screen-lg mx-auto">
+            <h1 class="text-3xl text-center tracking-widest">Tic Tac Toe</h1>
+        </div>
     </header>
 
-    <div id="change"></div>
+    <div class="container-lg h-screen mx-auto">
+        <div id="change"></div>
 
-    <table>
-        <tr>
-            <td class="box"></td>
-            <td class="box"></td>
-            <td class="box"></td>
-        </tr>
-        <tr>
-            <td class="box"></td>
-            <td class="box"></td>
-            <td class="box"></td>
-        </tr>
-        <tr>
-            <td class="box"></td>
-            <td class="box"></td>
-            <td class="box"></td>
-        </tr>
-    </table>
+        <div class="text-center">
+            <h2 id="turn" class="border-solid border-2 inline-block text-xl shadow-lg bg-gray-100 rounded-lg w-32 h-12 mt-8 p-2">Turn: ○</h2>
+        </div>
+
+        <table class="mx-auto table-fixed shadow-md my-8">
+            <tr class="bg-gray-200">
+                <td class="box text-center border-2 bg-green-400 w-20 h-20 text-xl"></td>
+                <td class="box text-center border-2 bg-green-400 w-20 h-20 text-xl"></td>
+                <td class="box text-center border-2 bg-green-400 w-20 h-20 text-xl"></td>
+            </tr>
+            <tr class="bg-gray-200">
+                <td class="box text-center border-2 bg-green-400 w-20 h-20 text-xl"></td>
+                <td class="box text-center border-2 bg-green-400 w-20 h-20 text-xl"></td>
+                <td class="box text-center border-2 bg-green-400 w-20 h-20 text-xl"></td>
+            </tr>
+            <tr class="bg-gray-200">
+                <td class="box text-center border-2 bg-green-400 w-20 h-20 text-xl"></td>
+                <td class="box text-center border-2 bg-green-400 w-20 h-20 text-xl"></td>
+                <td class="box text-center border-2 bg-green-400 w-20 h-20 text-xl"></td>
+            </tr>
+        </table>
+
+        <div class="max-w-screen-lg mx-auto text-center">
+            <button id="clear" class="text-lg inline-block border-double border-4 bg-purple-400 my-6 shadow-lg rounded-lg w-24 h-12 tracking-wider">
+                Reset
+            </button>
+        </div>
+    </div>
 
     <style>
         body {
+            font-family: 'Potta One', cursive;
             font-family: 'Roboto', sans-serif;
-            background: #f0d2b0;
-        }
-        table {
-            border-collapse: collapse;
-        }
-        td {
-            border: solid 2px #333;
-            padding: 5px;
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-            text-align: center;
         }
     </style>
 
