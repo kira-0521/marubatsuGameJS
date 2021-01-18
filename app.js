@@ -16,6 +16,7 @@ box.forEach((box) => {
             } else {
                 box.innerHTML = "×";
                 turn.innerHTML = "Turn: ○";
+                // ローカルストレージへ記録を保存
                 localStorage.setItem(box, "×");
             }
     })
@@ -32,7 +33,17 @@ clearBtn.addEventListener('click', () => {
     turn.innerHTML = "Turn: ◯";
 });
 
-// 勝敗決定ができない
+// 勝敗決定,要素数8
+const lines = [[0, 1, 2],
+              [3, 4, 5],
+              [6, 7, 8],
+              [0, 3, 6],
+              [1, 4, 7],
+              [2, 5, 8],
+              [0, 4, 8],
+              [2, 4, 6]];
+
+
 
 // ターン表示
 
